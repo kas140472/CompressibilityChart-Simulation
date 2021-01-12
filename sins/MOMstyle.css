@@ -1176,13 +1176,13 @@ div#copyright
 
 canvas#simscreen
 {
-	position:initial;
+	/*position:initial;*/
 
-	/*position:absolute;*/
-	left:100px;
-	top:100px;
-	height:950px;
-	width:900px;
+	position:absolute;
+	left:-15px;
+	top:70px;
+	height:840px;
+	width:770px;
 }
 
 
