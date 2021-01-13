@@ -2,23 +2,24 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <title>Compressibility chart</title>
+    <title>Compressibility Chart</title>
     <link rel="stylesheet" href="sins/MOMstyle.css" />
     <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
     <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js'></script>
-  
+
 </head>
 <body  >
 <noscript>
     The simulation requires JavaScript to be enabled.
 </noscript>
 <div id="container">
-    <div id="simtitle">Compressibility chart</div>
-<!--    <div id="scroll_div" style="max-height:390px; max-width:590px;overflow: scroll;">-->
-        <canvas id="simscreen" height="1500px" width="1500px" > </canvas>
+    <div id="simtitle">Compressibility Chart</div>
+    <!--    <div id="scroll_div" style="max-height:390px; max-width:590px;overflow: scroll;">-->
+    <canvas id="simscreen" height="1500" width="1500" > </canvas>
+    <!--        <canvas id="simscreen3" height="1500px" width="1500px" > </canvas>-->
 
-        <div style="width:500px;">
-<!--        </div>-->
+    <div style="width:500px;">
+        <!--        </div>-->
     </div>
     <div id="titleincanvas"></div>
     <div id="commentboxleft">
@@ -38,15 +39,17 @@
 
         <div class="variable">
             <div class="varname">
-<!--                <p style="position:absolute;left:-10px; top:-10px;font-family:verdana; font-size:14px;">Dry bulb temp:<br><br>Humidity Ratio:<br><br>Relative humidity:<br><br>wetbulb temp:<br><br>Enthalpy:<br>-->
-<!--                    <br>Dew pointtemp:<br></p>-->
-<!--                <p id="check1"style="position:absolute;color:red;left:90px; top:5px;font-family:verdana; font-size:14px;">19.5(<sup>o</sup>C)<br><br><br>0.009gm<br><br><br>69.9%<br><br><br>14(<sup>o</sup>C)<br><br><br>39.6 J<br><br>13</p>-->
-<!--                <p id="check2"style="position:absolute;color:blue;left:90px; top:5px;font-family:verdana; font-size:14px;">29(<sup>o</sup>C)<br><br><br>0.002gm<br><br><br>8%<br><br><br>-2(<sup>o</sup>C)<br><br>0 J<br><br><br>13</p>-->
-<!--                <p id="check3"style="position:absolute;color:green;left:90px; top:5px;font-family:verdana; font-size:14px;">22.5(<sup>o</sup>C)<br><br><br>0.007gm<br><br><br>48%<br><br><br>10(<sup>o</sup>C)<br><br>30 J<br><br><br>300</p>-->
-                <p style="position:absolute;left:-5px; top:-10px;font-family:verdana; font-size:12px;"><br>Substance:<br><br><br>P:<br><br><br>T:<br><br><br>Pc:<br><br><br>Tc:<br></p>
-                <p id="check1"style="position:absolute;color:red;left:83px; top:-10px;font-family:verdana; font-size:12px;"><br>Propane gas<br><br><br>7 MPa<br><br><br>152.5(<sup>o</sup>C)<br><br><br>4.26 MPa<br><br><br>370 K</p>
-                <p id="check2"style="position:absolute;color:darkblue;left:83px; top:2px;font-family:verdana; font-size:12px;">29 (<sup>o</sup>C)<br><br><br>0.0022<br><br><br>9%<br><br><br>12.44 (<sup>o</sup>C)<br><br><br>34.85 KJ/kg<br><br>-6.25 (<sup>o</sup>C)</p>
-                <p id="check3"style="position:absolute;color:green;left:83px; top:2px;font-family:verdana; font-size:12px;">21.5 (<sup>o</sup>C)<br><br><br>0.0078<br><br><br>49%<br><br><br>14.87 (<sup>o</sup>C)<br><br><br>41.48 kJ/kg<br><br>10.38 (<sup>o</sup>C)</p>
+                <!--                <p style="position:absolute;left:-10px; top:-10px;font-family:verdana; font-size:14px;">Dry bulb temp:<br><br>Humidity Ratio:<br><br>Relative humidity:<br><br>wetbulb temp:<br><br>Enthalpy:<br>-->
+                <!--                    <br>Dew pointtemp:<br></p>-->
+                <!--                <p id="check1"style="position:absolute;color:red;left:90px; top:5px;font-family:verdana; font-size:14px;">19.5(<sup>o</sup>C)<br><br><br>0.009gm<br><br><br>69.9%<br><br><br>14(<sup>o</sup>C)<br><br><br>39.6 J<br><br>13</p>-->
+                <!--                <p id="check2"style="position:absolute;color:blue;left:90px; top:5px;font-family:verdana; font-size:14px;">29(<sup>o</sup>C)<br><br><br>0.002gm<br><br><br>8%<br><br><br>-2(<sup>o</sup>C)<br><br>0 J<br><br><br>13</p>-->
+                <!--                <p id="check3"style="position:absolute;color:green;left:90px; top:5px;font-family:verdana; font-size:14px;">22.5(<sup>o</sup>C)<br><br><br>0.007gm<br><br><br>48%<br><br><br>10(<sup>o</sup>C)<br><br>30 J<br><br><br>300</p>-->
+                <p style="position:absolute;left:-5px; top:-10px;font-family:verdana; font-size:12px;">Gas:<br><br><br>P:<br><br><br>T:<br><br><br>v:<br><br><br>P<sub>cr</sub>:<br><br><br>T<sub>cr</sub>:</p>
+                <p id="check2"style="position:absolute;color:red;left:70px; top:-10px;font-family:verdana; font-size:12px;">R-134a<br><br><br>To be found<br> using chart<br><br>110(<sup>o</sup>C)<br><br><br>0.017279 <br>m<sup>3</sup>/kg<br><br>4.059 MPa<br><br><br>374.2 K</p>
+                <!--                <p id="check1"style="position:absolute;color:red;left:83px; top:-10px;font-family:verdana; font-size:12px;"><br>Propane gas<br><br><br>7 MPa<br><br><br>152.5(<sup>o</sup>C)<br><br><br>4.26 MPa<br><br><br>370 K</p>-->
+                <p id="check1"style="position:absolute;color:darkblue;left:70px; top:-10px;font-family:verdana; font-size:12px;">Nitrogen Gas<br><br><br>10 MPa<br><br><br>151.5 K<br><br><br>To be found<br> using chart<br><br>3.39 MPa<br><br><br>126.2 K</p>
+                <p id="check3"style="position:absolute;color:green;left:70px; top:-10px;font-family:verdana; font-size:12px;">R-134a<br><br><br>2.7579 MPa<br><br><br>To be found<br> using chart<br><br>0.0086481<br>m<sup>3</sup>/kg<br><br>4.059 MPa<br><br><br>374.2 K</p>
+                <p id="check4"style="position:absolute;color:midnightblue;left:70px; top:-10px;font-family:verdana; font-size:12px;">Superheated<br>Water<br><br>9.927 MPa<br><br><br>400(<sup>o</sup>C)<br><br><br>To be found<br> using chart<br><br>22.06 MPa<br><br><br>647.1 K</p>
             </div>
         </div>
     </div>
@@ -55,462 +58,693 @@
     <!-- Region for User controls of simulation-->
     <div id="controls" align="center">
 
-        EXAMPLE 1:<input type="radio" id="radio1"  name="chart" onclick="check1();">
-        EXAMPLE 2:<input type="radio" id="radio2"  name="chart" onclick="check2();">
-        EXAMPLE 3:<input type="radio" id="radio3"  name="chart" onclick="check3();"><br>
+        EXAMPLE 1:<input type="radio" id="radio1"  name="chart" onclick="check1(this);">
+        EXAMPLE 2:<input type="radio" id="radio2"  name="chart" onclick="check2(this);">
+        EXAMPLE 3:<input type="radio" id="radio3"  name="chart" onclick="check3(this);">
+        EXAMPLE 4:<input type="radio" id="radio4"  name="chart" onclick="check4(this);"><br><br>
         <img id="rotationbutton" onclick="location.reload();" src="sins/bluecwdull.png" />
-<!--        <button type="reset" id="Reset" onclick="location.reload();">Reset</button>-->
+        <!--        <button type="reset" id="Reset" onclick="location.reload();">Reset</button>-->
+        <div style="position:relative; left: 15px;top:-60px;">
+
+            <span class="tooltip" style="border-bottom:0px dotted ; color:black;top: -160px;left: -10px; text-align:justify">Abbreviations
+			<span class="tooltiptext" style="left: -10px;width: 400px">
+
+			P = Actual pressure of the gas<br>
+            T = Actual temperature of the gas<br>
+            v = Actual Specific volume of the gas<br>
+            P<sub>cr</sub> = Critical pressure of the gas<br>
+            T<sub>cr</sub> = Critical temperature of the gas<br>
+            P<sub>r</sub> = Reduced pressure of the gas<br>
+            T<sub>r</sub> = Reduced temperature of the gas<br>
+            v<sub>r</sub> = Pseudo reduced specific volume of the gas<br>
+            v<sub>ideal</sub> = Specific volume of the gas obtained from the ideal-gas equation<br>
+            Z = Compressibility factor<br>
+                R = Gas constant<br>
+                Gas constant of Nitrogen, R = 0.2968 kPa.m<sup>3</sup>/kg.K<br>
+                Gas constant of R-134a, R = 0.08149 kPa.m<sup>3</sup>/kg.K<br>
+                Gas constant of Superheated water, R = 0.4615 kPa.m<sup>3</sup>/kg.K<br>
+			</span>
+			</span>
+
+            <span class="tooltip" style="border-bottom:0px dotted ; color:black;top: -160px; text-align:justify;left: 95px">Formulae
+			<span class="tooltiptext" style="left: -60px; width: 100px">
+            P<sub>r</sub> = P/P<sub>cr</sub><br>
+            T<sub>r</sub> = T/T<sub>cr</sub><br>
+            v<sub>r</sub> = v/(RT<sub>cr</sub>/P<sub>cr</sub>)<br>
+                v = Z * v<sub>ideal</sub><br>
+                T = T<sub>r</sub> * T<sub>cr</sub><br>
+                P = P<sub>r</sub> * P<sub>cr</sub><br>
+			</span>
+			</span>
+        </div>
     </div>
     <!-- DND-Copyright display-->
     <div id="copyright" title="Developer : SOLVEr"> Copyright &copy; SOLVE The Virtual Lab @ NITK Surathkal </div>
 
 </div>
 <!--   Container div close-->
-  <script type="text/javascript" >
-        // <!-- function body() {                                                      //body onload -->
-            var canvas = document.getElementById('simscreen');
-            var context = canvas.getContext('2d');
-			context.setLineDash([22, 8]);
+<script type="text/javascript" >
+    // <!-- function body() {                                                      //body onload -->
+    var canvas = document.getElementById('simscreen');
+    var context = canvas.getContext('2d');
+    context.setLineDash([22, 8]);
 
-            // context.clearRect(0, 0, canvas.width, canvas.height);
-            var imageObj = new Image();
-            // <!-- imageObj.onload = function () { -->
-            // <!-- }; -->
-            imageObj.src = 'graph2.png';
-            imageObj.onload=function(){
-			context.drawImage(imageObj, 90, 60);}
+    // context.clearRect(0, 0, canvas.width, canvas.height);
+    var imageObj = new Image();
+    // <!-- imageObj.onload = function () { -->
+    // <!-- }; -->
+    imageObj.src = 'graph2.png';
+    imageObj.onload=function(){
+        context.drawImage(imageObj, 91, 64, 1068, 720);}
 
-        // <!-- } -->
-        //variables
-        var x = 485;
-        var y_start = -720;
-        var y_end = -720;
-        var z_start = -413;
-        var z_end = -413;
-		const time = 0;
-        var x11 = 625;
-        var y11_start = 660;
-        var y11_end = 701;
-        var x0=580;
-        var y0_start = 700;
-        var y0_end = 701;
-		var lW = 3;
-//z=0.55
-		//Time Intervals
-		var d0=0, d01=0, d011=0, d1 = 0, d2 = 0, d3 = 0 , d32=0, d4 = 0, d5 = 0, d6 = 0, d7 = 0, d72=0, d8 = 0, d9 = 0, d10 = 0, d11 = 0, d112=0, d12 = 0;
-        function check1() {
-			clearAllIntervals();
-            draw1();
-            function draw1() {
-                context.beginPath();
-                context.lineWidth = lW;
-				context.setLineDash([22, 8]);
-                context.arc(413,485,4,0,2*Math.PI,false);
-				context.fill();
-                // context.moveTo(y_start, x);
-                // context.lineTo(y_end, x);
-                // context.strokeStyle = "navy";
-                // context.stroke();
-                // y_end += 1;
-                // if (y_end <= 1420) {
-                //     d1 = setTimeout(draw1, time);
-                // }else{
-                //     clearIntervals(d1);
-                // }
+    // <!-- } -->
+    //variables
+    var x = 250;
+    var y_start = 250;
+    var y_end = 250;
+    var z_start = -555;
+    var z_end = -555;
+    const time = 0;
+    var x11 = 625;
+    var y11_start = 660;
+    var y11_end = 701;
+    var x0=580;
+    var y0_start = 700;
+    var y0_end = 701;
+    var lW = 3;
+    //z=0.55
+    //Time Intervals
+    var d0=0, d01=0, d011=0, d1 = 0, d2 = 0, d3 = 0 , d32=0, d4 = 0, d5 = 0, d6 = 0, d7 = 0, d72=0, d8 = 0, d9 = 0, d10 = 0, d11 = 0, d112=0, d12 = 0;
+    function check2(ele) {
+        canavsReset(ele);
+        // var canvas = document.getElementById('simscreen');
+        // var context = canvas.getContext('2d');
+        // context.setLineDash([22, 8]);
 
-            }
-
-            draw2();
-
-            function draw2() {
-                context.beginPath();
-                context.lineWidth = 5;
-                context.moveTo(413, -y_end);
-                context.lineTo(413, -y_start);
-                context.strokeStyle = "green";
-                context.stroke();
-                y_start += 1;
-                if (y_start <= -485) {
-                    d2 = setTimeout(draw2, time);
-                }else{
-                    clearIntervals(d2);
-                }
-            }
-
-            // draw31();
-            //
-            // function draw31() {
-            //     context.beginPath();
-            //     context.lineWidth = lW;
-            //     context.strokeStyle = "#87CEEB";
-            //     // context.moveTo(-z_start, x);
-            //     // context.lineTo(-z_end, x);
-            //     context.moveTo(700, 700);
-            //     context.lineTo(625, 660);
-            //     context.stroke();
-            //     z_end += 1;
-            //     if (z_end <= -580) {
-            //         d3 = setTimeout(draw31, time);
-            //     }else{
-            //         clearIntervals(d3);
-            //     }
-            //
-            // }
-
-            draw32();
-
-            function draw32() {
-                context.beginPath();
-                context.lineWidth = lW;
-                context.strokeStyle = "#FF8C00";
-                context.moveTo(-z_start, x);
-                context.lineTo(-z_end, x);
-                // context.moveTo(700, 700);
-                // context.lineTo(625, 660);
-                context.stroke();
-                z_end += 0.2;
-                if (z_end <= -202) {
-                    d32 = setTimeout(draw32, time);
-                }else{
-                    clearIntervals(d32);
-                }
-
-            }
-
-            // draw4();
-            //
-            // function draw4() {
-            //     context.beginPath();
-            //     context.lineWidth = 5;
-            //     context.strokeStyle = "black";
-            //     context.moveTo(x11, y11_start);
-            //     context.lineTo(x11, y11_end);
-            //     context.strokeStyle = "#87CEEB";
-            //     context.stroke();
-            //     y11_end += 1;
-            //     if (y11_end <= 945) {
-            //         d4 = setTimeout(draw4, time);
-            //     }else{
-            //         clearIntervals(d4);
-            //     }
-            // }
-            //
-            // draw0();
-            // function draw0() {
-            //     context.beginPath();
-            //     context.lineWidth=5;
-            //     context.moveTo(x0, y0_start);
-            //     context.lineTo(x0, y0_end);
-            //     context.strokeStyle = "#FF8C00";
-            //     context.stroke();
-            //     y0_end += 1;
-            //     if (y0_end <= 945) {
-            //         d0 = setTimeout(draw0, time);
-            //     }else{
-            //         clearIntervals(d0);
-            //     }
-            // }
-
-            if (document.getElementById('radio1').checked) {
-                document.getElementById('check1').style.visibility = 'visible';
-                document.getElementById('check3').style.visibility = 'hidden';
-                document.getElementById('check2').style.visibility = 'hidden';
-			} else {
-                document.getElementById('check3').style.visibility = 'hidden';
-            }
-
-            document.getElementById("p1").innerHTML="Pr = 1.64";
-            document.getElementById("p2").innerHTML="Tr = 1.15";
-            //document.getElementById("p3").innerHTML="Relative Humidity = Red Line";
-            document.getElementById("p33").innerHTML="z = 0.55";
-            document.getElementById("p11").innerHTML="Vr = 0.35";
-            //document.getElementById("p22").innerHTML="Dew point temperature = Orange Line";
-
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-        // //variables
-        var x1 = 894;
-        var y1_start =892 ;
-        var y1_end = 892;
-        var xg = 892;
-        var yg_start =894.85 ;
-        var yg_end = 894.85;
-        var z1_start = -890;
-        var z1_end = -890;
-        var x12 = 550;
-        var y12_start = 720;
-        var y12_end = 725;
-        var x01 = 175;
-        var y01_start = 890;
-        var y01_end = 890;
-
-        function check2(){
-			clearAllIntervals();
-            draw1();
-            function draw1() {
-                context.beginPath();
-                context.lineWidth = lW;
-                context.setLineDash([22, 8]);
-                context.arc(892,894.85,4,0,2*Math.PI,false);
-				context.fill();
-                context.moveTo(y1_start, x1);
-                context.lineTo(y1_end, x1);
-                context.strokeStyle = "navy";
-                context.stroke();
-                y1_end += 1;
-                if (y1_end <= 1420) {
-                    d5 = setTimeout(draw1, time);
-                }else{
-                    clearIntervals(d5);
-                }
-
-            }
-            draw2();
-            function draw2() {
-                context.beginPath();
-                context.lineWidth = 5;
-                context.moveTo(xg, yg_start);
-                context.lineTo(xg, yg_end);
-                context.strokeStyle = "green";
-                context.stroke();
-                yg_end += 0.25;
-                if (yg_end <= 945) {
-                    d6 = setTimeout(draw2, time);
-                }else{
-                    clearIntervals(d6);
-                }
-            }
-            draw31();
-            function draw31() {
-                context.beginPath();
-                context.lineWidth = lW;
-                context.strokeStyle = "#FF8C00";
-                context.moveTo(-z1_start,x1);
-                context.lineTo(x01, x1);
-                // context.moveTo(900, 900);
-                // context.lineTo(550, 720);
-                context.stroke();
-                z1_end += 1;
-                if (z1_end <= -x01) {
-                    d7 = setTimeout(draw31, time);
-                }else{
-                    clearIntervals(d7);
-                }
-            }
-
-            draw32();
-            function draw32() {
-                context.beginPath();
-                context.lineWidth = lW;
-                context.strokeStyle = "#87CEEB";
-                // context.moveTo(-z1_start,x1);
-                // context.lineTo(-z1_end, x1);
-                context.moveTo(892, 895.88);
-                context.lineTo(550, 720);
-                context.stroke();
-                z1_end += 1;
-                if (z1_end <= -130) {
-                    d72 = setTimeout(draw32, time);
-                }else{
-                    clearIntervals(d72);
-                }
-            }
-
-            draw21();
-            function draw21() {
-                context.beginPath();
-                context.lineWidth = 5;
-                context.moveTo(x12, y12_start);
-                context.lineTo(x12, y12_end);
-                context.strokeStyle = "#87CEEB";
-                context.stroke();
-                y12_end += 1;
-                if (y12_end <= 945) {
-                    d8 = setTimeout(draw21, time);
-                }else{
-                    clearIntervals(d8);
-                }
-            }
-
-            draw01();
-            function draw01() {
-                context.beginPath();
-                context.lineWidth=5;
-                context.moveTo(x01, y01_start);
-                context.lineTo(x01, y01_end);
-                context.strokeStyle = "#FF8C00";
-                context.stroke();
-                y01_end += 0.25;
-                if (y01_end <= 945) {
-                    d01 = setTimeout(draw01, time);
-                }else{
-                    clearIntervals(d01);
-                }
-            }
-
-            if(document.getElementById('radio2').checked)
-            {
-                document.getElementById('check2').style.visibility = 'visible';
-                document.getElementById('check1').style.visibility = 'hidden';
-                document.getElementById('check3').style.visibility = 'hidden';
-            }
-            else
-            {
-                document.getElementById('check3').style.visibility = 'hidden';
-            }
-
-            document.getElementById("p1").innerHTML="Dry bulb temperature = Green Line";
-            document.getElementById("p2").innerHTML="Humidity ratio = Navy Blue Line";
-            document.getElementById("p3").innerHTML="Relative Humidity = Red Line";
-            document.getElementById("p33").innerHTML="Wet bulb temperature = Light Blue Line";
-            document.getElementById("p11").innerHTML="Enthalpy = Black Line";
-            document.getElementById("p22").innerHTML="Dew point temperature = Orange Line";
-        }
-
-
-
-
-
-
-        // variables
-        var x3 = 750;
-        var y3_start = 750;
-        var y3_end = 750;
-        var z3_start = -750;
-        var z3_end = -750;
-        var x112 = 609;
-        var y112_start = 672;
-        var y112_end = 682;
-        var x011 = 512;
-        var y011_start = 750;
-        var y011_end = 750;
-
-        function check3(){
-			clearAllIntervals();
-            draw1();
-            function draw1() {
-                context.beginPath();
-                context.lineWidth = lW;
-                context.setLineDash([22, 8]);
-                context.arc(750,750,4,0,2*Math.PI,false);
-				context.fill();
-                context.moveTo(y3_start, x3);
-                context.lineTo(y3_end, x3);
-                context.strokeStyle = "navy";
-                context.stroke();
-                y3_end += 1;
-                if (y3_end <= 1419) {
-                    d9 = setTimeout(draw1, time);
-                }else{
-                    clearIntervals(d9);
-                }
-
-            }
-            draw2();
-            function draw2() {
-                context.beginPath();
-                context.lineWidth = 5;
-                context.moveTo(x3, y3_start);
-                context.lineTo(x3, y3_end);
-                context.strokeStyle = "green";
-                context.stroke();
-                y3_end += 0.25;
-                if (y3_end <= 945) {
-                    d10 = setTimeout(draw2, time);
-                }else{
-                    clearIntervals(d10);
-                }
-            }
-            draw31();
-            function draw31() {
-                context.beginPath();
-                context.lineWidth = lW;
-                context.strokeStyle = "#FF8C00";
-                context.moveTo(-z3_start,x3);
-                context.lineTo(510, x3);
-                
-                context.stroke();
-                z3_end += 1;
-                if (z3_end <= -510) {
-                    d11 = setTimeout(draw31, time);
-                }else{
-                    clearIntervals(d7);
-                }
-            }
-
-
-            draw32();
-            function draw32() {
-                context.beginPath();
-                context.lineWidth = lW;
-                context.strokeStyle = "#87CEEB";
-                context.moveTo(748, 751);
-                context.lineTo(606, 679);
-                context.stroke();
-                z1_end += 1;
-                if (z1_end <= -130) {
-                    d72 = setTimeout(draw32, time);
-                }else{
-                    clearIntervals(d72);
-                }
-            }
-            draw211();
-
-        function draw211() {
+        // // context.clearRect(0, 0, canvas.width, canvas.height);
+        // var imageObj = new Image();
+        // // <!-- imageObj.onload = function () { -->
+        // // <!-- }; -->
+        // imageObj.src = 'graph1.png';
+        // imageObj.onload=function(){
+        //     context.drawImage(imageObj, 93, 64, 1068, 720);}
+        clearAllIntervals();
+        draw1();
+        function draw1() {
             context.beginPath();
-            context.lineWidth = 6;
-            context.moveTo(606, 682);
-            context.lineTo(606, y112_end);
-            context.strokeStyle = "#87CEEB";
+            context.lineWidth = lW;
+            context.setLineDash([21, 8]);
+            context.arc(550,252,4,0,2*Math.PI,false);
             context.stroke();
-            y112_end += 1;
-            if (y112_end <= 945) {
-                d12 = setTimeout(draw211, time);
-            }else{
-            clearIntervals(d12);
-        }
+            // context.moveTo(y_start, x);
+            // context.lineTo(y_end, x);
+            // context.strokeStyle = "navy";
+            // context.stroke();
+            // y_end += 1;
+            // if (y_end <= 1420) {
+            //     d1 = setTimeout(draw1, time);
+            // }else{
+            //     clearIntervals(d1);
+            // }
+
         }
 
-        draw011();
-        function draw011() {
+        draw2();
+
+        function draw2() {
             context.beginPath();
-            context.lineWidth=5;
-            context.moveTo(x011, y011_start);
-            context.lineTo(x011, y011_end);
-            context.strokeStyle = "#FF8C00";
+            context.lineWidth = 5;
+            context.moveTo(555, y_start);
+            context.lineTo(555, y_end);
+            context.strokeStyle = "green";
             context.stroke();
-            y011_end += 1;
-            if (y011_end <= 945) {
-                d011 = setTimeout(draw011, time);
+            y_end += 1;
+            if (y_end <= 728) {
+                d2 = setTimeout(draw2, time);
             }else{
-                clearIntervals(d011);
+                clearIntervals(d2);
+                draw32();
+
             }
         }
+
+        // draw31();
+        //
+        // function draw31() {
+        //     context.beginPath();
+        //     context.lineWidth = lW;
+        //     context.strokeStyle = "#87CEEB";
+        //     // context.moveTo(-z_start, x);
+        //     // context.lineTo(-z_end, x);
+        //     context.moveTo(700, 700);
+        //     context.lineTo(625, 660);
+        //     context.stroke();
+        //     z_end += 1;
+        //     if (z_end <= -580) {
+        //         d3 = setTimeout(draw31, time);
+        //     }else{
+        //         clearIntervals(d3);
+        //     }
+        //
+        // }
+
+
+        function draw32() {
+            context.beginPath();
+            context.lineWidth = lW;
+            context.strokeStyle = "navy";
+            context.moveTo(-z_start, x);
+            context.lineTo(-z_end, x);
+            // context.moveTo(700, 700);
+            // context.lineTo(625, 660);
+            context.stroke();
+            z_end += 0.5;
+            if (z_end <= -188) {
+                d32 = setTimeout(draw32, time);
+            }else{
+                clearIntervals(d32);
+            }
+
+        }
+
+        // draw4();
+        //
+        // function draw4() {
+        //     context.beginPath();
+        //     context.lineWidth = 5;
+        //     context.strokeStyle = "black";
+        //     context.moveTo(x11, y11_start);
+        //     context.lineTo(x11, y11_end);
+        //     context.strokeStyle = "#87CEEB";
+        //     context.stroke();
+        //     y11_end += 1;
+        //     if (y11_end <= 945) {
+        //         d4 = setTimeout(draw4, time);
+        //     }else{
+        //         clearIntervals(d4);
+        //     }
+        // }
+        //
+        // draw0();
+        // function draw0() {
+        //     context.beginPath();
+        //     context.lineWidth=5;
+        //     context.moveTo(x0, y0_start);
+        //     context.lineTo(x0, y0_end);
+        //     context.strokeStyle = "#FF8C00";
+        //     context.stroke();
+        //     y0_end += 1;
+        //     if (y0_end <= 945) {
+        //         d0 = setTimeout(draw0, time);
+        //     }else{
+        //         clearIntervals(d0);
+        //     }
+        // }
+
+        if (document.getElementById('radio2').checked) {
+            document.getElementById('check2').style.visibility = 'visible';
+            document.getElementById('check3').style.visibility = 'hidden';
+            document.getElementById('check1').style.visibility = 'hidden';
+            document.getElementById('check4').style.visibility = 'hidden';
+        } else {
+            document.getElementById('check4').style.visibility = 'hidden';
+        }
+
+        document.getElementById("p2").innerHTML="v<sub>r</sub> = 2.30";
+        document.getElementById("p1").innerHTML="T<sub>r</sub> = 1.023";
+        document.getElementById("p3").innerHTML="P<sub>r</sub> = 0.383";
+        document.getElementById("p11").innerHTML="P = 1554.597 kPa";
+        document.getElementById("p22").innerHTML="z = 0.868";
+        document.getElementById("p33").innerHTML=" ";
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    // //variables
+    var x1 = 492;
+    var y1_start =-720 ;
+    var y1_end = -720;
+    var xg = 892;
+    var yg_start =-720 ;
+    var yg_end = -720;
+    var z1_start = -578;
+    var z1_end = -578;
+    var x12 = 550;
+    var y12_start = 720;
+    var y12_end = 725;
+    var x01 = 175;
+    var y01_start = 890;
+    var y01_end = 890;
+
+    function check1(ele){
+        canavsReset(ele)
+        // var canvas = document.getElementById('simscreen');
+        // var context = canvas.getContext('2d');
+        // context.setLineDash([22, 8]);
+
+        // // context.clearRect(0, 0, canvas.width, canvas.height);
+        // var imageObj = new Image();
+        // // <!-- imageObj.onload = function () { -->
+        // // <!-- }; -->
+        // imageObj.src = 'graph2.png';
+        // imageObj.onload=function(){
+        //     context.drawImage(imageObj, 93, 65);}
+        clearAllIntervals();
+        draw1();
+        function draw1() {
+            context.beginPath();
+            context.lineWidth = lW;
+            context.setLineDash([22, 8]);
+            context.arc(578,492,4,0,2*Math.PI,false);
+            context.stroke();
+            context.closePath();
+            // context.moveTo(y1_start, x1);
+            // context.lineTo(y1_end, x1);
+            // context.strokeStyle = "navy";
+            // context.stroke();
+            // y1_end += 1;
+            // if (y1_end <= 1420) {
+            //     d5 = setTimeout(draw1, time);
+            // }else{
+            //     clearIntervals(d5);
+            // }
+
+        }
+        draw2();
+        function draw2() {
+            context.beginPath();
+            context.lineWidth = 5;
+            context.moveTo(602, -yg_end);
+            context.lineTo(602, -yg_start);
+            context.strokeStyle = "green";
+            context.stroke();
+            yg_start +=1;
+            if (yg_start <= -492) {
+                d6 = setTimeout(draw2, time);
+            }else{
+                clearIntervals(d6);
+                draw31();
+
+            }
+        }
+        function draw31() {
+            context.beginPath();
+            context.lineWidth = lW;
+            context.strokeStyle = "navy";
+            context.moveTo(-z1_start,493);
+            context.lineTo(-z1_end, 493);
+            // context.moveTo(900, 900);
+            // context.lineTo(550, 720);
+            context.stroke();
+            z1_end += 0.5;
+            if (z1_end <= -210) {
+                d7 = setTimeout(draw31, time);
+            }else{
+                clearIntervals(d7);
+            }
+            context.arc(578,492,4,0,2*Math.PI,false);
+
+        }
+
+        // draw32();
+        // function draw32() {
+        //     context.beginPath();
+        //     context.lineWidth = lW;
+        //     context.strokeStyle = "#87CEEB";
+        //     // context.moveTo(-z1_start,x1);
+        //     // context.lineTo(-z1_end, x1);
+        //     context.moveTo(892, 895.88);
+        //     context.lineTo(550, 720);
+        //     context.stroke();
+        //     z1_end += 1;
+        //     if (z1_end <= -130) {
+        //         d72 = setTimeout(draw32, time);
+        //     }else{
+        //         clearIntervals(d72);
+        //     }
+        // }
+        //
+        // draw21();
+        // function draw21() {
+        //     context.beginPath();
+        //     context.lineWidth = 5;
+        //     context.moveTo(x12, y12_start);
+        //     context.lineTo(x12, y12_end);
+        //     context.strokeStyle = "#87CEEB";
+        //     context.stroke();
+        //     y12_end += 1;
+        //     if (y12_end <= 945) {
+        //         d8 = setTimeout(draw21, time);
+        //     }else{
+        //         clearIntervals(d8);
+        //     }
+        // }
+        //
+        // draw01();
+        // function draw01() {
+        //     context.beginPath();
+        //     context.lineWidth=5;
+        //     context.moveTo(x01, y01_start);
+        //     context.lineTo(x01, y01_end);
+        //     context.strokeStyle = "#FF8C00";
+        //     context.stroke();
+        //     y01_end += 0.25;
+        //     if (y01_end <= 945) {
+        //         d01 = setTimeout(draw01, time);
+        //     }else{
+        //         clearIntervals(d01);
+        //     }
+        // }
+
+        if(document.getElementById('radio1').checked)
+        {
+            document.getElementById('check1').style.visibility = 'visible';
+            document.getElementById('check2').style.visibility = 'hidden';
+            document.getElementById('check3').style.visibility = 'hidden';
+            document.getElementById('check4').style.visibility = 'hidden';
+        }
+        else
+        {
+            document.getElementById('check4').style.visibility = 'hidden';
+        }
+
+        document.getElementById("p1").innerHTML="P<sub>r</sub> = 2.95";
+        document.getElementById("p2").innerHTML="T<sub>r</sub> = 1.20";
+        document.getElementById("p3").innerHTML="v<sub>r</sub> = 0.219";
+        document.getElementById("p33").innerHTML="v = 0.002428 m<sup>3</sup>/kg";
+        document.getElementById("p11").innerHTML="z = 0.54";
+        document.getElementById("p22").innerHTML="v<sub>ideal</sub> = 0.004496 m<sup>3</sup>/kg";
+    }
+
+
+
+
+
+
+    // variables
+    var x3 = 750;
+    var y3_start = 750;
+    var y3_end = 750;
+    var z3_start = -750;
+    var z3_end = -750;
+    var x112 = 609;
+    var y112_start = 672;
+    var y112_end = 682;
+    var x011 = 512;
+    var y011_start = 750;
+    var y011_end = 750;
+
+    function check3(ele){
+        canavsReset(ele)
+        // var canvas = document.getElementById('simscreen');
+        // var context = canvas.getContext('2d');
+        // context.setLineDash([22, 8]);
+
+        // // context.clearRect(0, 0, canvas.width, canvas.height);
+        // var imageObj = new Image();
+        // // <!-- imageObj.onload = function () { -->
+        // // <!-- }; -->
+        // imageObj.src = 'graph1.png';
+        // imageObj.onload=function(){
+        //     context.drawImage(imageObj, 93, 64, 1068, 720);}
+        clearAllIntervals();
+        draw1();
+        function draw1() {
+            context.beginPath();
+            context.lineWidth = lW;
+            context.setLineDash([22, 8]);
+            context.arc(750,750,4,0,2*Math.PI,false);
+            context.fill();
+            // context.moveTo(y3_start, x3);
+            // context.lineTo(y3_end, x3);
+            // context.strokeStyle = "navy";
+            // context.stroke();
+            // y3_end += 1;
+            // if (y3_end <= 1419) {
+            //     d9 = setTimeout(draw1, time);
+            // }else{
+            //     clearIntervals(d9);
+            // }
+
+        }
+        draw2();
+        function draw2() {
+            context.beginPath();
+            context.lineWidth = 5;
+            context.moveTo(838, -y3_start);
+            context.lineTo(838, -y3_end);
+            context.strokeStyle = "green";
+            context.stroke();
+            y3_end += 1;
+            if (y3_end <= -345) {
+                d10 = setTimeout(draw2, time);
+            }else{
+                clearIntervals(d10);
+                draw31();
+            }
+        }
+        function draw31() {
+            context.beginPath();
+            context.lineWidth = lW;
+            context.strokeStyle = "navy";
+            context.moveTo(-z3_start,345);
+            context.lineTo(-z3_end, 345);
+
+            context.stroke();
+            z3_end += 0.5;
+            if (z3_end <= -188) {
+                d11 = setTimeout(draw31, time);
+            }else{
+                clearIntervals(d11);
+            }
+        }
+
+
+        //     draw32();
+        //     function draw32() {
+        //         context.beginPath();
+        //         context.lineWidth = lW;
+        //         context.strokeStyle = "#87CEEB";
+        //         context.moveTo(748, 751);
+        //         context.lineTo(606, 679);
+        //         context.stroke();
+        //         z1_end += 1;
+        //         if (z1_end <= -130) {
+        //             d72 = setTimeout(draw32, time);
+        //         }else{
+        //             clearIntervals(d72);
+        //         }
+        //     }
+        //     draw211();
+        //
+        // function draw211() {
+        //     context.beginPath();
+        //     context.lineWidth = 6;
+        //     context.moveTo(606, 682);
+        //     context.lineTo(606, y112_end);
+        //     context.strokeStyle = "#87CEEB";
+        //     context.stroke();
+        //     y112_end += 1;
+        //     if (y112_end <= 945) {
+        //         d12 = setTimeout(draw211, time);
+        //     }else{
+        //     clearIntervals(d12);
+        // }
+        // }
+        //
+        // draw011();
+        // function draw011() {
+        //     context.beginPath();
+        //     context.lineWidth=5;
+        //     context.moveTo(x011, y011_start);
+        //     context.lineTo(x011, y011_end);
+        //     context.strokeStyle = "#FF8C00";
+        //     context.stroke();
+        //     y011_end += 1;
+        //     if (y011_end <= 945) {
+        //         d011 = setTimeout(draw011, time);
+        //     }else{
+        //         clearIntervals(d011);
+        //     }
+        // }
 
         if (document.getElementById('radio3').checked) {
             document.getElementById('check1').style.visibility = 'hidden';
             document.getElementById('check2').style.visibility = 'hidden';
             document.getElementById('check3').style.visibility = 'visible';
+            document.getElementById('check4').style.visibility = 'hidden';
         } else {
-            document.getElementById('check3').style.visibility = 'hidden';
+            document.getElementById('check4').style.visibility = 'hidden';
         }
-        document.getElementById("p1").innerHTML="Dry bulb temperature = Green Line";
-        document.getElementById("p2").innerHTML="Humidity ratio = Navy Blue Line";
-        document.getElementById("p3").innerHTML="Relative Humidity = Red Line";
-        document.getElementById("p33").innerHTML="Wet bulb temperature = Light Blue Line";
-        document.getElementById("p11").innerHTML="Enthalpy = Black Line";
-        document.getElementById("p22").innerHTML="Dew point temperature = Orange Line";
+        document.getElementById("p1").innerHTML="P<sub>r</sub> = 0.679";
+        document.getElementById("p2").innerHTML="v<sub>r</sub> = 1.15";
+        document.getElementById("p3").innerHTML="T<sub>r</sub> = 1.035";
+        document.getElementById("p11").innerHTML="T = 387.3 K";
+        document.getElementById("p22").innerHTML="z = 0.755";
+        document.getElementById("p33").innerHTML="  ";
+    }
+
+    // variables
+    var x4 = 750;
+    var y4_start = 750;
+    var y4_end = 750;
+    var z4_start = -750;
+    var z4_end = -750;
+    var x114 = 609;
+    var y114_start = 672;
+    var y114_end = 682;
+    var x014 = 512;
+    var y014_start = 750;
+    var y014_end = 750;
+
+    function check4(ele) {
+        canavsReset(ele);
+        // var canvas = document.getElementById('simscreen');
+        // var context = canvas.getContext('2d');
+        // context.setLineDash([22, 8]);
+
+        // // context.clearRect(0, 0, canvas.width, canvas.height);
+        // var imageObj = new Image();
+        // // <!-- imageObj.onload = function () { -->
+        // // <!-- }; -->
+        // imageObj.src = 'graph1.png';
+        // imageObj.onload=function(){
+        //     context.drawImage(imageObj, 93, 64, 1068, 720);}
+        clearAllIntervals();
+        draw1();
+        function draw1() {
+            context.beginPath();
+            context.lineWidth = lW;
+            context.setLineDash([22, 8]);
+            context.arc(578,492,4,0,2*Math.PI,false);
+            context.stroke();
+            context.closePath();
+            // context.moveTo(y1_start, x1);
+            // context.lineTo(y1_end, x1);
+            // context.strokeStyle = "navy";
+            // context.stroke();
+            // y1_end += 1;
+            // if (y1_end <= 1420) {
+            //     d5 = setTimeout(draw1, time);
+            // }else{
+            //     clearIntervals(d5);
+            // }
+
+        }
+        draw2();
+        function draw2() {
+            context.beginPath();
+            context.lineWidth = 5;
+            context.moveTo(619, -y4_end);
+            context.lineTo(619, -y4_start);
+            context.strokeStyle = "green";
+            context.stroke();
+            y4_start +=1;
+            if (y4_start <= -266) {
+                d6 = setTimeout(draw2, time);
+            }else{
+                clearIntervals(d6);
+                draw31();
+
+            }
+        }
+        function draw31() {
+            context.beginPath();
+            context.lineWidth = lW;
+            context.strokeStyle = "navy";
+            context.moveTo(-z4_start,266);
+            context.lineTo(-z4_end, 266);
+            // context.moveTo(900, 900);
+            // context.lineTo(550, 720);
+            context.stroke();
+            z4_end += 0.5;
+            if (z4_end <= -190) {
+                d7 = setTimeout(draw31, time);
+            }else{
+                clearIntervals(d7);
+            }
+            context.arc(578,492,4,0,2*Math.PI,false);
+
+        }
+
+        // draw32();
+        // function draw32() {
+        //     context.beginPath();
+        //     context.lineWidth = lW;
+        //     context.strokeStyle = "#87CEEB";
+        //     // context.moveTo(-z1_start,x1);
+        //     // context.lineTo(-z1_end, x1);
+        //     context.moveTo(892, 895.88);
+        //     context.lineTo(550, 720);
+        //     context.stroke();
+        //     z1_end += 1;
+        //     if (z1_end <= -130) {
+        //         d72 = setTimeout(draw32, time);
+        //     }else{
+        //         clearIntervals(d72);
+        //     }
+        // }
+        //
+        // draw21();
+        // function draw21() {
+        //     context.beginPath();
+        //     context.lineWidth = 5;
+        //     context.moveTo(x12, y12_start);
+        //     context.lineTo(x12, y12_end);
+        //     context.strokeStyle = "#87CEEB";
+        //     context.stroke();
+        //     y12_end += 1;
+        //     if (y12_end <= 945) {
+        //         d8 = setTimeout(draw21, time);
+        //     }else{
+        //         clearIntervals(d8);
+        //     }
+        // }
+        //
+        // draw01();
+        // function draw01() {
+        //     context.beginPath();
+        //     context.lineWidth=5;
+        //     context.moveTo(x01, y01_start);
+        //     context.lineTo(x01, y01_end);
+        //     context.strokeStyle = "#FF8C00";
+        //     context.stroke();
+        //     y01_end += 0.25;
+        //     if (y01_end <= 945) {
+        //         d01 = setTimeout(draw01, time);
+        //     }else{
+        //         clearIntervals(d01);
+        //     }
+        // }
+
+        if(document.getElementById('radio4').checked)
+        {
+            document.getElementById('check4').style.visibility = 'visible';
+            document.getElementById('check2').style.visibility = 'hidden';
+            document.getElementById('check3').style.visibility = 'hidden';
+            document.getElementById('check1').style.visibility = 'hidden';
+        }
+        else
+        {
+            document.getElementById('check4').style.visibility = 'hidden';
+        }
+
+        document.getElementById("p1").innerHTML="P<sub>r</sub> = 0.45";
+        document.getElementById("p2").innerHTML="T<sub>r</sub> = 1.04";
+        document.getElementById("p3").innerHTML="v<sub>r</sub> = 1.964";
+        document.getElementById("p33").innerHTML="v = 0.026593 m<sup>3</sup>/kg";
+        document.getElementById("p11").innerHTML="z = 0.85";
+        document.getElementById("p22").innerHTML="v<sub>ideal</sub> = 0.031287 m<sup>3</sup>/kg";
     }
 
 
@@ -531,81 +765,111 @@
 
 
 
+    function clearIntervals(idd) {
+        clearTimeout(idd);
+    }
+    function clearAllIntervals() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        // context.drawImage(imageObj, 90, 60);
+        clearTimeout(d0);
+        clearTimeout(d01);
+        clearTimeout(d011);
+        clearTimeout(d1);
+        clearTimeout(d2);
+        clearTimeout(d3);
+        clearTimeout(d32);
+        clearTimeout(d4);
+        clearTimeout(d5);
+        clearTimeout(d6);
+        clearTimeout(d7);
+        clearTimeout(d72);
+        clearTimeout(d8);
+        clearTimeout(d9);
+        clearTimeout(d10);
+        clearTimeout(d11);
+        clearTimeout(d112);
+        clearTimeout(d12);
+        graph1Reset();
+        graph2Reset();
+        graph3Reset();
+        graph4Reset();
+    }
 
+    function graph1Reset() {
+        x = 250;
+        y_start = 250;
+        y_end = 250;
+        z_start = -555;
+        z_end = -555;
+        x11 = 625;
+        y11_start = 660;
+        y11_end = 701;
+        x0=580;
+        y0_start = 700;
+        y0_end = 701;
+    }
 
-		function clearIntervals(idd) {
-			clearTimeout(idd);
-		}
-		function clearAllIntervals() {
-			context.clearRect(0, 0, canvas.width, canvas.height);
-			context.drawImage(imageObj, 90, 60);
-            clearTimeout(d0);
-            clearTimeout(d01);
-            clearTimeout(d011);
-            clearTimeout(d1);
-			clearTimeout(d2);
-			clearTimeout(d3);
-            clearTimeout(d32);
-			clearTimeout(d4);
-			clearTimeout(d5);
-			clearTimeout(d6);
-			clearTimeout(d7);
-            clearTimeout(d72);
-			clearTimeout(d8);
-			clearTimeout(d9);
-			clearTimeout(d10);
-			clearTimeout(d11);
-            clearTimeout(d112);
-			clearTimeout(d12);
-			graph1Reset();
-			graph2Reset();
-			graph3Reset();
-		}
-		
-		function graph1Reset() {
-			x = 485;
-			y_start = -720;
-			y_end = -720;
-			z_start = -413;
-			z_end = -413;
-			x11 = 625;
-			y11_start = 660;
-			y11_end = 701;
-            x0=580;
-            y0_start = 700;
-            y0_end = 701;
-		}
+    function graph2Reset() {
+        x1 = 492;
+        y1_start = 892;
+        y1_end = 892;
+        xg = 892;
+        yg_start =-718;
+        yg_end = -718;
+        z1_start = -602;
+        z1_end = -602;
+        x12 = 550;
+        y12_start = 720;
+        y12_end = 725;
+        x01 = 175;
+        y01_start = 890;
+        y01_end = 890;
+    }
 
-		function graph2Reset() {
-			x1 = 893;
-			y1_start = 892;
-			y1_end = 892;
-            xg = 892;
-            yg_start =894.85 ;
-            yg_end = 894.85;
-			z1_start = -890;
-			z1_end = -890;
-			x12 = 550;
-			y12_start = 720;
-			y12_end = 725;
-            x01 = 175;
-            y01_start = 890;
-            y01_end = 890;
-		}
-		
-		function graph3Reset() {
-			x3 = 750;
-			y3_start = 750;
-			y3_end = 751;
-			z3_start = -750;
-			z3_end = -750;
-			x112 = 609;
-			y112_start = 672;
-			y112_end = 682;
-            x011 = 512;
-            y011_start = 750;
-            y011_end = 750;
-		}
-    </script>
+    function graph3Reset() {
+        x3 = 750;
+        y3_start = -728;
+        y3_end = -728;
+        z3_start = -838;
+        z3_end = -838;
+        x112 = 609;
+        y112_start = 672;
+        y112_end = 682;
+        x011 = 512;
+        y011_start = 750;
+        y011_end = 750;
+    }
+
+    function graph4Reset() {
+        x4 = 750;
+        y4_start = -728;
+        y4_end = -728;
+        z4_start = -619;
+        z4_end = -619;
+        x114 = 609;
+        y114_start = 672;
+        y114_end = 682;
+        x014 = 512;
+        y014_start = 750;
+        y014_end = 750;
+    }
+
+    function canavsReset(ele){
+        if(ele.id == "radio1"){
+            context.clearRect(0,0,1500,1500)
+            imageObj.src = " ";
+            imageObj.src = 'graph2.png';
+            imageObj.onload=function(){
+                context.drawImage(imageObj, 93, 64, 1068, 720);}
+        } else {
+            context.clearRect(0,0,1500,1500)
+            imageObj.src = " ";
+            imageObj.src = 'graph1.png';
+            imageObj.onload=function(){
+                context.drawImage(imageObj, 93, 64, 1068, 720);}
+        }
+    }
+</script>
 </body>
 </html>
+
