@@ -1179,10 +1179,21 @@ canvas#simscreen
 	/*position:initial;*/
 
 	position:absolute;
-	left:-15px;
-	top:70px;
+	left:-10px;
+	top:65px;
 	height:840px;
 	width:770px;
+}
+
+canvas#simscreen3
+{
+	/*position:initial;*/
+
+	position:absolute;
+	left:-10px;
+	top:65px;
+	height:840px;
+	width:840px;
 }
 
 
@@ -1240,10 +1251,10 @@ div#controls
 {
 	position:absolute;
 	left:616px;
-	top:445px;
+	top:440px;
 	height: 10px;
 	width: 175px;
-	font-size: 20px;
+	font-size: 15px;
 }
 div#div
 {
@@ -1271,7 +1282,7 @@ div#div1{
 {
 	position: relative;
 	left: 10px;
-	top: 9px;
+	top: -8px;
 
 }
 
@@ -1305,6 +1316,13 @@ div#div1{
 	visibility:hidden;
 }
 #check3
+{
+	position: relative;
+	font-size: 14px;
+	display: inline;
+	visibility:hidden;
+}
+#check4
 {
 	position: relative;
 	font-size: 14px;
@@ -1417,6 +1435,36 @@ div#div1{
 	font-size: 12px;
 	left: -10px;
 }
+
+.tooltip {
+	position: absolute;
+	display: inline-block;
+	border-bottom: 0px dotted black;
+	font-family: Comic Sans MS;
+	font-size:12px;
+}
+
+.tooltip .tooltiptext {
+	font-family: Comic Sans MS;
+	font-size:12px;
+	visibility: hidden;
+	width: 100px;
+	background-color: black;
+	color: #fff;
+	border-radius: 6px;
+	padding: 10px 10px 10px 10px;
+
+	/* Position the tooltip */
+	position: absolute;
+	left: 0px;
+	top:25px;
+	z-index: 100;
+}
+
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+}
+
 
 /*#titleincanvas*/
 /*{*/
