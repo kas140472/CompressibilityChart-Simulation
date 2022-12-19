@@ -6,7 +6,6 @@
   <tr style="background-color: white">
     <td>
     <ol>
-    References for Compressibility Chart:
   <li>Basic and Applied Thermodynamics - P.K. Nag</li>
   <li>Thermodynamics : An engineering approach - Cengel and Boles</li>
     </ol>
